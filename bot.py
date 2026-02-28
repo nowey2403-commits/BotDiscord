@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-TOKEN = os.environ.get("MTQ3NzA4ODg5MDY2NDc3OTkxNw.G8mmLP.xry7rM4hm1ZdocVNj__W-syNx6LVpFMIT6EA3U")
 TOKEN = os.environ.get("TOKEN")
 
 # ⬇️ Remplace ces IDs par ceux que tu as copiés
