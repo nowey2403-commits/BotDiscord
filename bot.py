@@ -1,16 +1,17 @@
 import discord
-from discord.ext import commands
 import os
+from discord.ext import commands
+
 TOKEN = os.environ.get("TOKEN")
 
-# ⬇️ Remplace ces IDs par ceux que tu as copiés
 CHANNEL_IDS = [
-    1469836228773019924,  # Salon serveur 1
-   
+    1469836228773019924,
 ]
 
-# ⬇️ Colle ton ID Discord ici (clic droit sur ton pseudo → Copier l'identifiant)
-OWNER_ID = 827931277273333830
+OWNER_IDS = [
+    827931277273333830,
+    1216102220009832608,
+]
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -23,7 +24,7 @@ async def on_ready():
 
 @bot.command()
 async def broadcast(ctx, *, message):
-    if ctx.author.id != OWNER_ID:
+    if ctx.author.id not in OWNER_IDS:
         await ctx.send("❌ Tu n'as pas la permission d'utiliser cette commande !")
         return
 
