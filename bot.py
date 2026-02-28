@@ -23,7 +23,7 @@ async def on_ready():
     print(f"📡 Présent sur {len(bot.guilds)} serveur(s)")
 
 @bot.command()
-async def broadcast(ctx, *, message):
+async def send(ctx, *, message):
     if ctx.author.id not in OWNER_IDS:
         await ctx.send("❌ Tu n'as pas la permission d'utiliser cette commande !")
         return
